@@ -3,7 +3,7 @@
 Example programs for [auditfile-dotnet](https://github.com/XML-auditfile/auditfile-dotnet), the streaming reader
 for Dutch tax audit files (XAF and related).
 
-The samples use the published prerelease NuGet packages, pinned to `0.0.2-alpha`.
+The samples use the published NuGet packages, pinned to `0.0.4`.
 
 | Project | Shows |
 | ------- | ----- |
@@ -20,7 +20,8 @@ dotnet run --project Validate -- administratie.xaf --en
 
 The samples use one fixed version of the packages, written in each `.csproj`. `ReadToMemory` references
 `XmlAuditfile.Memory`, which depends on `XmlAuditfile`; the other samples reference `XmlAuditfile` directly.
-There is no Dependabot on purpose: a sample shows how to use a specific release, and the version is raised by hand.
+Dependabot (`.github/dependabot.yml`) opens a pull request for each new release, and CI builds every sample
+before it is merged, so the samples follow the latest version.
 
 `ReadToMemory` publishes as a single native executable (`PublishAot`), which shows that the reader is
 trimming and Native AOT compatible.
