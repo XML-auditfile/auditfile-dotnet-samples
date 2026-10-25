@@ -11,8 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Fixed versions on purpose: the samples show one released package. Raise them by hand. -->
-    <PackageReference Include="XmlAuditfile" Version="0.0.2-alpha" />
+    <PackageReference Include="XmlAuditfile" Version="0.0.4" />
   </ItemGroup>
 
 </Project>

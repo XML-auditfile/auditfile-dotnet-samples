@@ -1,0 +1,19 @@
+# Keeps the samples on the latest released package.
+version: 2
+updates:
+  # One project per sample, no solution file.
+  - package-ecosystem: nuget
+    directories: ["/Benchmarks", "/ReadToMemory", "/Validate"]
+    schedule:
+      interval: weekly
+    groups:
+      auditfile:
+        patterns: ["XmlAuditfile*"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
