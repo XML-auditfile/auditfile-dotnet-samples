@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="XmlAuditfile.Memory" Version="0.0.4" />
+    <PackageReference Include="XmlAuditfile.Memory" Version="0.0.5" />
   </ItemGroup>
 
 </Project>

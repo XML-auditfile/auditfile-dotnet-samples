@@ -3,7 +3,7 @@ version: 2
 updates:
   # One project per sample, no solution file.
   - package-ecosystem: nuget
-    directories: ["/Benchmarks", "/ReadToMemory", "/Validate"]
+    directories: ["/Benchmarks", "/CustomDefinitions", "/ReadToMemory", "/Validate"]
     schedule:
       interval: weekly
     groups:
