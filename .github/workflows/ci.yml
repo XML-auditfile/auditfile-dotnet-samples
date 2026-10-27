@@ -18,5 +18,9 @@ jobs:
       - run: dotnet --version
 
       - run: dotnet build Benchmarks -c Release
+      - run: dotnet build CustomDefinitions -c Release
       - run: dotnet build ReadToMemory -c Release
       - run: dotnet build Validate -c Release
+
+      # Checks definitions/views.json and definitions/dialects.json against the package; without a file it exits with 2.
+      - run: dotnet run --project CustomDefinitions -c Release --no-build || [ $? -eq 2 ]
